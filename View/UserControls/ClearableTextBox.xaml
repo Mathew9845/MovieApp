@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="MovieRatingApp.View.UserControls.ClearableTextBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MovieRatingApp.View.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="250">
+    <Grid Background= "#80FFFFFF">
+        <TextBox x:Name="txtInput" VerticalContentAlignment="Center"
+                 FontSize="16" FontWeight="Light" Background="Transparent"
+                 TextChanged="txtInput_TextChanged" Text="{Binding BoundText, UpdateSourceTrigger=PropertyChanged}"/>
+        
+        <TextBlock x:Name="tbPlaceholder" FontSize="16" FontWeight="Light"
+                   Foreground="DarkGray" VerticalAlignment="Center" Margin="0,0,0,0"
+                   Panel.ZIndex="-1" Text="{Binding BoundText}" />
+        <Button x:Name="btnClear" Width="30" HorizontalAlignment="Right" Content="x"
+                Background="Transparent" Foreground="LightGray" BorderThickness="0"
+                Click="btnClear_Click"/>
+
+
+
+    </Grid>
+</UserControl>
